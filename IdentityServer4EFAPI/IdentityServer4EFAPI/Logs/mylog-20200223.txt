@@ -1,0 +1,206 @@
+2020-02-23T12:20:28.0836598+05:30  [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation. (553c312b)
+2020-02-23T12:20:28.8316473+05:30 0HLTO5ILIEHK0:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50501/  0 (ca22a1cb)
+2020-02-23T12:20:28.8316246+05:30 0HLTO5ILIEHK1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44304/api/values   (ca22a1cb)
+2020-02-23T12:20:28.9199303+05:30 0HLTO5ILIEHK0:00000001 [INF] Request finished in 89.682ms 200  (791a596a)
+2020-02-23T12:20:29.3162910+05:30 0HLTO5ILIEHK1:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "IdentityServer4EFAPI.Controllers.ValuesController" ("IdentityServer4EFAPI"). (122b2fdf)
+2020-02-23T12:20:29.3411589+05:30 0HLTO5ILIEHK1:00000001 [INF] Authorization failed. (b15dd539)
+2020-02-23T12:20:29.3437195+05:30 0HLTO5ILIEHK1:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-02-23T12:20:29.3528950+05:30 0HLTO5ILIEHK1:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-02-23T12:20:29.3669528+05:30 0HLTO5ILIEHK1:00000001 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2020-02-23T12:20:29.3732373+05:30 0HLTO5ILIEHK1:00000001 [INF] Executed action "IdentityServer4EFAPI.Controllers.ValuesController.Get (IdentityServer4EFAPI)" in 50.3648ms (afa2e885)
+2020-02-23T12:20:29.3836890+05:30 0HLTO5ILIEHK1:00000001 [INF] Request finished in 558.2943ms 401  (791a596a)
+2020-02-23T12:21:01.2558880+05:30 0HLTO5ILIEHK0:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44304/connect/token application/x-www-form-urlencoded 121 (ca22a1cb)
+2020-02-23T12:21:01.2828527+05:30 0HLTO5ILIEHK0:00000002 [WRN] CorsPolicyService did not allow origin: "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop" (f5320bfb)
+2020-02-23T12:21:01.5002391+05:30 0HLTO5ILIEHK0:00000002 [INF] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token" (f7642de5)
+2020-02-23T12:21:02.0304721+05:30 0HLTO5ILIEHK0:00000002 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-02-23T12:21:02.5648302+05:30 0HLTO5ILIEHK0:00000002 [INF] Executed DbCommand ("23"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-02-23T12:21:02.7321796+05:30 0HLTO5ILIEHK0:00000002 [INF] Credentials validated for username: "Abhishek" (cb811aa7)
+2020-02-23T12:21:02.7651073+05:30 0HLTO5ILIEHK0:00000002 [INF] Token request validation success
+"{
+  \"ClientId\": \"ro.angular\",
+  \"GrantType\": \"password\",
+  \"Scopes\": \"api1 openid\",
+  \"UserName\": \"Abhishek\",
+  \"Raw\": {
+    \"grant_type\": \"password\",
+    \"username\": \"Abhishek\",
+    \"password\": \"***REDACTED***\",
+    \"scope\": \"api1 openid\",
+    \"client_id\": \"ro.angular\",
+    \"client_secret\": \"***REDACTED***\"
+  }
+}" (7454775f)
+2020-02-23T12:21:02.8923727+05:30 0HLTO5ILIEHK0:00000002 [INF] Executed DbCommand ("11"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2020-02-23T12:21:03.0139065+05:30 0HLTO5ILIEHK0:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2020-02-23T12:21:03.0467893+05:30 0HLTO5ILIEHK0:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-02-23T12:21:03.1359475+05:30 0HLTO5ILIEHK0:00000002 [INF] Executed DbCommand ("48"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-02-23T12:21:03.2912193+05:30 0HLTO5ILIEHK0:00000002 [INF] Request finished in 2035.2209ms 200 application/json; charset=UTF-8 (791a596a)
+2020-02-23T12:21:36.9663631+05:30 0HLTO5ILIEHK0:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44304/connect/token application/x-www-form-urlencoded 937 (ca22a1cb)
+2020-02-23T12:21:36.9807626+05:30 0HLTO5ILIEHK0:00000003 [WRN] CorsPolicyService did not allow origin: "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop" (f5320bfb)
+2020-02-23T12:21:36.9832525+05:30 0HLTO5ILIEHK0:00000003 [INF] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token" (f7642de5)
+2020-02-23T12:21:37.0049416+05:30 0HLTO5ILIEHK0:00000003 [ERR] Client secret validation failed for client: "ro.angular". (8e952702)
+2020-02-23T12:21:37.0156425+05:30 0HLTO5ILIEHK0:00000003 [INF] Request finished in 49.3344ms 400 application/json; charset=UTF-8 (791a596a)
+2020-02-23T12:22:15.7855852+05:30 0HLTO5ILIEHK0:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44304/connect/token application/x-www-form-urlencoded 938 (ca22a1cb)
+2020-02-23T12:22:15.7895346+05:30 0HLTO5ILIEHK0:00000004 [WRN] CorsPolicyService did not allow origin: "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop" (f5320bfb)
+2020-02-23T12:22:15.7904897+05:30 0HLTO5ILIEHK0:00000004 [INF] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token" (f7642de5)
+2020-02-23T12:22:15.8024300+05:30 0HLTO5ILIEHK0:00000004 [ERR] Refresh token too long (0b2b9d1f)
+2020-02-23T12:22:15.8071769+05:30 0HLTO5ILIEHK0:00000004 [ERR] "{
+  \"ClientId\": \"ro.angular\",
+  \"GrantType\": \"refresh_token\",
+  \"Raw\": {
+    \"grant_type\": \"refresh_token\",
+    \"client_secret\": \"***REDACTED***\",
+    \"refresh_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjQwNTA2MzcxNzcwNzVhMGJmYWVlYTdlY2M2YmQyYjM1IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1ODI0NDA2NjMsImV4cCI6MTU4MjQ0NDI2MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMDQiLCJhdWQiOlsiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMDQvcmVzb3VyY2VzIiwiYXBpMSJdLCJjbGllbnRfaWQiOiJyby5hbmd1bGFyIiwic3ViIjoiYmM3ZTM1NTQtOGYzMi00Njc0LWJiZTQtMjgyNjE4Njg3OWQwIiwiYXV0aF90aW1lIjoxNTgyNDQwNjYyLCJpZHAiOiJsb2NhbCIsImdpdmVuX25hbWUiOiJBYmhpc2hlayIsImVtYWlsIjoiYWJnNzQ0QGdtYWlsLmNvbSIsInNjb3BlIjpbIm9wZW5pZCIsImFwaTEiXSwiYW1yIjpbInB3ZCJdfQ.ggH_95j8ihy7sz-vxiAG-njEprmaPUqoyUW718wSnUnxr5WU4MUBp4UhUFGp65qGGdlVK5I5OxD4r7r5uFw1Cw7zhO5Km8xeCgS3qs30QXciXSq9vzn3p7_MbWt4xLpK8W1qI8zaLFlnQNAFbTGCeP7pGrH4xZszNcpdQkbnM1IBjkEZpMSvW_7IW5zOgG3zmzq92HrLX0ek0Imn_7tYAk0mT6ofEy28LGkOEJKxEUbJbevYU7cnO8c-_R2ZjNVZjVQYOQgriy6rTPlInBZ1n2Z4QNsvVzGi2M4Ra9uVE0HKNW6-udYBwRiK1i7tGvKIcAZAs-Bfall_06uD_gfGzA\",
+    \"client_id\": \"ro.angular\"
+  }
+}" (6fb40c84)
+2020-02-23T12:22:15.8105959+05:30 0HLTO5ILIEHK0:00000004 [INF] Request finished in 25.065ms 400 application/json; charset=UTF-8 (791a596a)
+2020-02-23T12:28:38.7765892+05:30  [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation. (553c312b)
+2020-02-23T12:28:39.5301871+05:30 0HLTO5N7R04B5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44304/api/values   (ca22a1cb)
+2020-02-23T12:28:39.5301918+05:30 0HLTO5N7R04B6:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:50501/  0 (ca22a1cb)
+2020-02-23T12:28:39.5980218+05:30 0HLTO5N7R04B6:00000001 [INF] Request finished in 69.7315ms 200  (791a596a)
+2020-02-23T12:28:39.9780633+05:30 0HLTO5N7R04B5:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "IdentityServer4EFAPI.Controllers.ValuesController" ("IdentityServer4EFAPI"). (122b2fdf)
+2020-02-23T12:28:39.9959509+05:30 0HLTO5N7R04B5:00000001 [INF] Authorization failed. (b15dd539)
+2020-02-23T12:28:39.9966519+05:30 0HLTO5N7R04B5:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2020-02-23T12:28:40.0053535+05:30 0HLTO5N7R04B5:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2020-02-23T12:28:40.0135954+05:30 0HLTO5N7R04B5:00000001 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2020-02-23T12:28:40.0176236+05:30 0HLTO5N7R04B5:00000001 [INF] Executed action "IdentityServer4EFAPI.Controllers.ValuesController.Get (IdentityServer4EFAPI)" in 35.2151ms (afa2e885)
+2020-02-23T12:28:40.0271645+05:30 0HLTO5N7R04B5:00000001 [INF] Request finished in 502.8552ms 401  (791a596a)
+2020-02-23T12:28:45.3702796+05:30 0HLTO5N7R04B6:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44304/connect/token application/x-www-form-urlencoded 121 (ca22a1cb)
+2020-02-23T12:28:45.3973735+05:30 0HLTO5N7R04B6:00000002 [WRN] CorsPolicyService did not allow origin: "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop" (f5320bfb)
+2020-02-23T12:28:45.5992017+05:30 0HLTO5N7R04B6:00000002 [INF] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token" (f7642de5)
+2020-02-23T12:28:46.1136075+05:30 0HLTO5N7R04B6:00000002 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-02-23T12:28:46.7068241+05:30 0HLTO5N7R04B6:00000002 [INF] Executed DbCommand ("64"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-02-23T12:28:46.8709987+05:30 0HLTO5N7R04B6:00000002 [INF] Credentials validated for username: "Abhishek" (cb811aa7)
+2020-02-23T12:28:46.9076249+05:30 0HLTO5N7R04B6:00000002 [INF] Token request validation success
+"{
+  \"ClientId\": \"ro.angular\",
+  \"GrantType\": \"password\",
+  \"Scopes\": \"api1 openid\",
+  \"UserName\": \"Abhishek\",
+  \"Raw\": {
+    \"grant_type\": \"password\",
+    \"username\": \"Abhishek\",
+    \"password\": \"***REDACTED***\",
+    \"scope\": \"api1 openid\",
+    \"client_id\": \"ro.angular\",
+    \"client_secret\": \"***REDACTED***\"
+  }
+}" (7454775f)
+2020-02-23T12:28:47.0266246+05:30 0HLTO5N7R04B6:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2020-02-23T12:28:47.1379445+05:30 0HLTO5N7R04B6:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2020-02-23T12:28:47.1674509+05:30 0HLTO5N7R04B6:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-02-23T12:28:47.2078019+05:30 0HLTO5N7R04B6:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-02-23T12:28:47.4037856+05:30 0HLTO5N7R04B6:00000002 [INF] Request finished in 2033.594ms 200 application/json; charset=UTF-8 (791a596a)
+2020-02-23T12:29:01.9850541+05:30 0HLTO5N7R04B5:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44304/connect/token application/x-www-form-urlencoded 136 (ca22a1cb)
+2020-02-23T12:29:02.0802512+05:30 0HLTO5N7R04B5:00000002 [WRN] CorsPolicyService did not allow origin: "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop" (f5320bfb)
+2020-02-23T12:29:02.0823904+05:30 0HLTO5N7R04B5:00000002 [INF] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token" (f7642de5)
+2020-02-23T12:29:02.0893815+05:30 0HLTO5N7R04B5:00000002 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-02-23T12:29:02.1016048+05:30 0HLTO5N7R04B5:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-02-23T12:29:02.1269360+05:30 0HLTO5N7R04B5:00000002 [INF] Credentials validated for username: "Abhishek" (cb811aa7)
+2020-02-23T12:29:02.1273971+05:30 0HLTO5N7R04B5:00000002 [INF] Token request validation success
+"{
+  \"ClientId\": \"ro.angular\",
+  \"GrantType\": \"password\",
+  \"Scopes\": \"api1 offline_access openid\",
+  \"UserName\": \"Abhishek\",
+  \"Raw\": {
+    \"grant_type\": \"password\",
+    \"username\": \"Abhishek\",
+    \"password\": \"***REDACTED***\",
+    \"scope\": \"api1 openid offline_access\",
+    \"client_id\": \"ro.angular\",
+    \"client_secret\": \"***REDACTED***\"
+  }
+}" (7454775f)
+2020-02-23T12:29:02.1334416+05:30 0HLTO5N7R04B5:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2020-02-23T12:29:02.1427352+05:30 0HLTO5N7R04B5:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2020-02-23T12:29:02.1473723+05:30 0HLTO5N7R04B5:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-02-23T12:29:02.1807418+05:30 0HLTO5N7R04B5:00000002 [INF] Executed DbCommand ("32"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-02-23T12:29:02.2646964+05:30 0HLTO5N7R04B5:00000002 [INF] Request finished in 279.6539ms 200 application/json; charset=UTF-8 (791a596a)
+2020-02-23T12:29:17.8688914+05:30 0HLTO5N7R04B6:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44304/connect/token application/x-www-form-urlencoded 145 (ca22a1cb)
+2020-02-23T12:29:17.8724244+05:30 0HLTO5N7R04B6:00000003 [WRN] CorsPolicyService did not allow origin: "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop" (f5320bfb)
+2020-02-23T12:29:17.8732082+05:30 0HLTO5N7R04B6:00000003 [INF] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token" (f7642de5)
+2020-02-23T12:29:18.0821744+05:30 0HLTO5N7R04B6:00000003 [INF] Entity Framework Core "2.1.11-servicing-32099" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2020-02-23T12:29:18.1396737+05:30 0HLTO5N7R04B6:00000003 [INF] Executed DbCommand ("37"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2020-02-23T12:29:18.1932796+05:30 0HLTO5N7R04B6:00000003 [INF] Token request validation success
+"{
+  \"ClientId\": \"ro.angular\",
+  \"GrantType\": \"refresh_token\",
+  \"RefreshToken\": \"3c94734cd0c0aef6bfdb3ade99046b91d4da10987033061424237a93e49654d7\",
+  \"Raw\": {
+    \"grant_type\": \"refresh_token\",
+    \"client_secret\": \"***REDACTED***\",
+    \"refresh_token\": \"3c94734cd0c0aef6bfdb3ade99046b91d4da10987033061424237a93e49654d7\",
+    \"client_id\": \"ro.angular\"
+  }
+}" (7454775f)
+2020-02-23T12:29:18.2057780+05:30 0HLTO5N7R04B6:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2020-02-23T12:29:18.2106141+05:30 0HLTO5N7R04B6:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2020-02-23T12:29:18.2137152+05:30 0HLTO5N7R04B6:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-02-23T12:29:18.2170439+05:30 0HLTO5N7R04B6:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-02-23T12:29:18.2704403+05:30 0HLTO5N7R04B6:00000003 [INF] Request finished in 401.541ms 200 application/json; charset=UTF-8 (791a596a)

@@ -1,0 +1,14 @@
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\bin\Debug\netcoreapp2.1\IdentityServer4EFAPI.deps.json
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\bin\Debug\netcoreapp2.1\IdentityServer4EFAPI.runtimeconfig.json
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\bin\Debug\netcoreapp2.1\IdentityServer4EFAPI.runtimeconfig.dev.json
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\bin\Debug\netcoreapp2.1\IdentityServer4EFAPI.dll
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.csprojAssemblyReference.cache
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.csproj.CoreCompileInputs.cache
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.RazorAssemblyInfo.cache
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.RazorAssemblyInfo.cs
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.AssemblyInfoInputs.cache
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.AssemblyInfo.cs
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.RazorTargetAssemblyInfo.cache
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\bin\Debug\netcoreapp2.1\IdentityServer4EFAPI.pdb
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.dll
+D:\Projects\.netCoreApps\IdentityServer4EFAPI\IdentityServer4EFAPI\obj\Debug\netcoreapp2.1\IdentityServer4EFAPI.pdb

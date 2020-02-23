@@ -1,0 +1,186 @@
+{
+	"variables": [],
+	"info": {
+		"name": ".netcoreCustumidentity",
+		"_postman_id": "89b544bd-2c67-7121-f275-45d9521a4bb8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get token",
+			"request": {
+				"url": {
+					"raw": "https://localhost:44304/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44304",
+					"path": [
+						"connect",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "",
+							"equals": false,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"description": ""
+						},
+						{
+							"key": "username",
+							"value": "Abhishek",
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "Password@123",
+							"description": ""
+						},
+						{
+							"key": "scope",
+							"value": "api1 openid",
+							"description": ""
+						},
+						{
+							"key": "client_id",
+							"value": "ro.angular",
+							"description": ""
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"description": ""
+						},
+						{
+							"key": "refresh_token",
+							"value": "",
+							"description": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"url": "https://localhost:44304/api/Account/Register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\nuserName:\"Abhishek\",\nfirstName:\"Abhishek\",\nlastName:\"Gangadhar\",\nemail:\"abg744@gmail.com\",\npassword:\"Password@123\",\nconfirmPassword:\"Password@123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get values",
+			"request": {
+				"url": "https://localhost:44304/api/values",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get refreshtoken",
+			"request": {
+				"url": {
+					"raw": "https://localhost:44304/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44304",
+					"path": [
+						"connect",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "",
+							"equals": false,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_secre",
+							"value": "secret",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjQwNTA2MzcxNzcwNzVhMGJmYWVlYTdlY2M2YmQyYjM1IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1ODI0NDA0MjIsImV4cCI6MTU4MjQ0NDAyMiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMDQiLCJhdWQiOlsiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMDQvcmVzb3VyY2VzIiwiYXBpMSJdLCJjbGllbnRfaWQiOiJyby5hbmd1bGFyIiwic3ViIjoiYmM3ZTM1NTQtOGYzMi00Njc0LWJiZTQtMjgyNjE4Njg3OWQwIiwiYXV0aF90aW1lIjoxNTgyNDQwNDIxLCJpZHAiOiJsb2NhbCIsImdpdmVuX25hbWUiOiJBYmhpc2hlayIsImVtYWlsIjoiYWJnNzQ0QGdtYWlsLmNvbSIsInNjb3BlIjpbIm9wZW5pZCIsImFwaTEiXSwiYW1yIjpbInB3ZCJdfQ.gfDL7DpdzuCPz4puwMT-tS2hx4r5cPXEGYoFt9I7LqC6_8h4hnr091TyDckOMUpftRKglwjhM3xHGiJclxTLWSoMeaeXV884D79ithpRhip5NeaGghAtEoHYPsvZQ4Djek5bJ7Nkh6wSjiIpFGTwvNckxHwLMb5b399PPTN6PgfKRcegJZ5U85opCMy8dkfapG8GASOkOaT1jJzZ6lRtsoK6uBUbPMIvJgjDTosNJ0PVtiCZqXFD5QYlRNa-6t21XFUMeWhqWwt6vQ-ygxFY8oxWCCma3rA4n7cwi-TFFmfS3DNTW6tJX-YdNzNOkexd1_e5rlppDZkP4B_mSmWMQQ",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "ro.angular",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
